@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load static %}
+{% comment "about" %}
+This is a base template that can (and should) be overridden or replaced in the project. This file is here so the application will be able to work decoupled from any project, but it should be changed when plugging this application into any other project.
+{% end comment %}
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block head_title %}{% trans "Sentence finder" %}{% endblock %}</title>
+    <script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/popper.min.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+</head>
+<body>
+<main>
+<h1>{% block title %}Find sentences{% endblock %}</h1>
+        {% block content %}
+        {% endblock %}
+</main>
+<footer class="footer">
+<div class="container-fluid">
+<div class="copyright pull-left">Copyright &#169; 2018. Manuel Cortez.</div>
+</div>
+</footer>
+    </body>
+</html>
