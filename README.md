@@ -11,7 +11,7 @@ Note: For best results, it is very recommended to run this application bound to 
 
 ## Demo
 
-You can see a live demo with 3 languages added: Russian, English and Spanish in the following Address: [Go to the demo of this application](https://manuelcortez.net/find_sentence)
+You can see a live demo with 3 languages added: Russian, English and Spanish in the following Address: [Go to the demo of this application](https://manuelcortez.net/find_sentences)
 
 ## Dependencies
 
@@ -24,7 +24,7 @@ See requirements.txt to see and install automatically all of the dependencies fo
 
 ### download the dataset
 
-Once the application has been placed somewhere in a django project and migrations were performed (python manage.py makemigrations sentence_finder && python manage.py migrate sentence_finder), you'll need to import the dataset firstly. To do so, you need to download the sentences file from the [Tatoeba downloads page](https://tatoeba.org/downloads) and place the uncompressed CSV file in the django's root directory (where manage.py lives).
+Once the application has been placed somewhere in a django project, its URL patterns (located at sentence_finder.urls) have been imported into the main project and migrations were performed (python manage.py makemigrations sentence_finder && python manage.py migrate sentence_finder), you'll need to import the dataset firstly. To do so, you need to download the sentences file from the [Tatoeba downloads page](https://tatoeba.org/downloads) and place the uncompressed CSV file in the django's root directory (where manage.py lives).
 
 ### Importing the dataset
 
@@ -36,7 +36,7 @@ Where "rus,eng,spa" is the list of language codes (written in ISO 639-3) separat
 
 You can import the dataset as many times as you wish. The program will clear the sentences table in the database every time a new import starts, so you will not end with dozens of billions of records.
 
-### Adding new language
+### Adding a new language
 
 If you have imported a new language not covered here, you will need to add it to the forms and text to speech sections of the application, so users will be able to select your new language from the search form, and text to speech will work as expected, respectively. If you haven't imported any new language, you can skip this section.
 
